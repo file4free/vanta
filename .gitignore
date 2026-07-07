@@ -2,3 +2,4 @@ pipeline/
 .claude/
 .vercel/
 .DS_Store
+.vercel

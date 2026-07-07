@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VANTA — 1,200 hp Electric Hypercar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ambient grain -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- fixed top bar -->
+<header class="topbar">
+  <div class="wordmark">VANTA</div>
+  <a class="topbar-cta" href="#reserve">Reserve</a>
+</header>
+
+<!-- speed HUD -->
+<div class="hud" id="hud" aria-hidden="true">
+  <div class="hud-speed"><span id="hudSpeed">0</span><span class="hud-unit">mph</span></div>
+  <div class="hud-bar"><div class="hud-bar-fill" id="hudFill"></div></div>
+  <div class="hud-meta"><span id="hudMode">STANDBY</span><span id="hudPct">0%</span></div>
+</div>
+
+<!-- loader -->
+<div class="loader" id="loader">
+  <div class="loader-word">VANTA</div>
+  <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+  <div class="loader-label" id="loaderLabel">CALIBRATING&nbsp;LIGHT-BAR</div>
+</div>
+
+<!-- ============ SCROLL-SCRUB JOURNEY ============ -->
+<div class="journey" id="journey">
+  <div class="stage">
+    <canvas id="film"></canvas>
+    <div class="vignette"></div>
+
+    <!-- hero -->
+    <section class="overlay" data-in="0.00" data-out="0.115">
+      <div class="hero-block">
+        <h1 class="hero-title">VANTA</h1>
+        <p class="hero-sub">Darker than fast.</p>
+        <p class="hero-hint">Scroll to drive</p>
+      </div>
+    </section>
+
+    <!-- reveal caption -->
+    <section class="overlay overlay-left" data-in="0.13" data-out="0.23">
+      <div class="cap">
+        <div class="cap-kicker">01 / IGNITION</div>
+        <h2 class="cap-title">The desert<br>wakes it.</h2>
+      </div>
+    </section>
+
+    <!-- stats -->
+    <section class="overlay" data-in="0.28" data-out="0.46" id="statsOverlay">
+      <div class="stats">
+        <div class="stat"><div class="stat-num"><span data-count="1.9" data-dec="1">0.0</span><em>s</em></div><div class="stat-label">0–60 mph</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="1200" data-dec="0">0</span><em>hp</em></div><div class="stat-label">Tri-motor output</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="520" data-dec="0">0</span><em>mi</em></div><div class="stat-label">Range</div></div>
+      </div>
+    </section>
+
+    <!-- canyon -->
+    <section class="overlay overlay-right" data-in="0.55" data-out="0.70">
+      <div class="cap">
+        <div class="cap-kicker">03 / THE CANYON</div>
+        <h2 class="cap-title">Threading rock<br>at 200.</h2>
+      </div>
+    </section>
+
+    <!-- night -->
+    <section class="overlay" data-in="0.80" data-out="0.97">
+      <div class="cap cap-center">
+        <div class="cap-kicker">04 / NIGHT MODE</div>
+        <h2 class="cap-title">All you see<br>is the signature.</h2>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ============ DESIGN ============ -->
+<section class="section design">
+  <div class="section-head">
+    <div class="cap-kicker">DESIGN</div>
+    <h2 class="section-title">Obsidian, machined.</h2>
+    <p class="section-body">Every panel is a single sheet of matte composite. No seams to catch the light — only the light-bar is allowed to speak.</p>
+  </div>
+  <div class="macro-grid">
+    <figure class="macro"><img src="assets/stills/macro_front.jpg" alt="VANTA light-bar macro detail"><figcaption>Light-bar — 1.4&nbsp;mm blade LED</figcaption></figure>
+    <figure class="macro macro-tall"><img src="assets/stills/hero.jpg" alt="VANTA in the white desert at dawn"><figcaption>Body — matte obsidian composite</figcaption></figure>
+    <figure class="macro"><img src="assets/stills/macro_wheel.jpg" alt="VANTA turbine wheel macro detail"><figcaption>Turbine wheels — sealed carbon</figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ CONFIGURATOR ============ -->
+<section class="section config">
+  <div class="section-head">
+    <div class="cap-kicker">CONFIGURE</div>
+    <h2 class="section-title">Three shades of gone.</h2>
+  </div>
+  <div class="config-stage">
+    <img id="configImg" src="assets/stills/paint_obsidian.jpg" alt="VANTA paint configurator">
+  </div>
+  <div class="swatches" role="tablist" aria-label="Paint options">
+    <button class="swatch active" data-img="assets/stills/paint_obsidian.jpg" data-name="Obsidian"><span class="chip chip-obsidian"></span>Obsidian</button>
+    <button class="swatch" data-img="assets/stills/paint_cyan.jpg" data-name="Ion Cyan"><span class="chip chip-cyan"></span>Ion Cyan</button>
+    <button class="swatch" data-img="assets/stills/paint_white.jpg" data-name="Bone White"><span class="chip chip-white"></span>Bone White</button>
+  </div>
+  <div class="config-name" id="configName">Obsidian</div>
+</section>
+
+<!-- ============ RESERVE ============ -->
+<section class="section reserve" id="reserve">
+  <h2 class="reserve-title">VANTA</h2>
+  <p class="reserve-sub">Production limited to 299 units. Deliveries begin 2028.</p>
+  <a class="reserve-btn" href="#reserve">Reserve — $1,000 deposit</a>
+  <p class="reserve-fine">Fully refundable. Fictional, gloriously so.</p>
+</section>
+
+<footer class="footer">VANTA Motors — a fiction rendered with Seedance&nbsp;2.0 · No cars were harmed</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
